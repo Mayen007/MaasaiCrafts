@@ -1,0 +1,521 @@
+/* CSS Variables */
+:root {
+  --primary-color: #C8102E;
+  /* Maasai Red */
+  --secondary-color: #2B3A67;
+  /* Deep Blue */
+  --accent-color: #F4C430;
+  /* Golden Yellow */
+  --text-color: #333333;
+  /* Dark Gray for text */
+  --background-color: #F5F5F5;
+  /* Light Gray for background */
+  --beadwork-white: #F5F5F5;
+  /* Beadwork White */
+  --orange: #FF8C00;
+  /* Orange */
+}
+
+/* Reset box-sizing and remove default margin and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding: 50px;
+}
+
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* Set default font */
+  color: var(--text-color);
+  /* Set text color */
+  background-color: var(--background-color);
+  /* Set background color */
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: space-around;
+  /* Space out items */
+  align-items: center;
+  /* Center items vertically */
+  background-color: var(--primary-color);
+  /* Set background color */
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand styles */
+.brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  /* Set font size */
+  font-weight: bold;
+  /* Make text bold */
+  color: var(--beadwork-white);
+  /* Set text color */
+  text-decoration: none;
+  font-style: oblique;
+}
+
+/* Button styles */
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  /* Set background color */
+  color: var(--beadwork-white);
+  /* Set text color */
+  padding: 0.8rem 1rem;
+  /* Set padding */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Round corners */
+  cursor: pointer;
+  /* Change cursor on hover */
+  font-size: 1rem;
+  /* Set font size */
+  margin: 1rem 0;
+  /* Set margin */
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  /* Change background color on hover */
+}
+
+/* List item styles */
+li {
+  display: inline;
+  /* Display items inline */
+  margin: 0 1rem;
+  /* Set margin */
+  list-style: none;
+  /* Remove list style */
+}
+
+/* Link styles */
+li a {
+  color: var(--beadwork-white);
+  /* Set text color */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+li a:hover {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* Hero section styles */
+.hero-section {
+  background-image: url('../images/hero-bg.jpg');
+  /* Set background image */
+  color: var(--beadwork-white);
+  background-size: cover;
+  /* Cover the entire element */
+  background-position: center;
+  /* Center the image */
+  height: 87vh;
+  /* Set height */
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: center;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
+  text-align: center;
+  /* Center text */
+  flex-direction: column;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.hero-section h2 {
+  font-size: 3.3rem;
+  font-weight: 800;
+}
+
+/* About Us and Content Container Styles */
+.about-us-container,
+.content-container,
+.artisans-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Text and Image Column Styles */
+.text-column,
+.img-column {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Text Column Paragraph Styles */
+.text-column p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Brand Name Styles in Text Column */
+.text-column .brand-name {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+/* Image Column Image Styles */
+.img-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Products Section Styling */
+/* Section styles for products, blog, meet artisans, about us, and testimonials */
+.products-section,
+.blog-section,
+.meet-artisans-section,
+.about-us,
+.testimonials,
+.artisans-container {
+  padding: 2rem 1rem;
+  /* Padding for the sections */
+  background-color: var(--background-color);
+  /* Background color */
+  text-align: center;
+  /* Center text */
+  border-radius: 10px;
+  /* Rounded corners */
+  margin-bottom: 30px;
+  /* Bottom margin with high priority */
+}
+
+.meet-artisans {
+  width: 88%;
+  margin: auto;
+}
+
+.meet-artisans h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.meet-artisans p {
+  text-align: center;
+}
+
+.products-section p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.artisan-profile p {
+  margin-top: 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-display,
+.blog-posts-container,
+.meet-artisans-section,
+.testimonials-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.item,
+.testimonial,
+.artisan-profile {
+  background-color: var(--beadwork-white);
+  border: 1px solid none;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+}
+
+.item img,
+.artisan-profile img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.item h3,
+.artisan-profile h3 {
+  font-size: 1.5rem;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.product-btn {
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  color: var(--beadwork-white);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1rem 0;
+  color: var(--beadwork-white);
+  background-color: var(--orange);
+  letter-spacing: 1px;
+}
+
+.email-btn-div {
+  display: block;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.email {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.text-content {
+  flex: 1;
+  padding: 10px;
+}
+
+.text-content p {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.text-content .brand-name {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-content .brand-name {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+/* Responsive Design for screens smaller than 768px */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-section {
+    height: 70vh;
+  }
+
+  .about-us-container,
+  .content-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-column,
+  .img-column,
+  .item {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .item {
+    max-width: 400px;
+  }
+}
+
+.testimonial blockquote {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--orange);
+  /* Orange */
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--primary-color);
+  /* Set background color */
+  color: var(--beadwork-white);
+  /* Set text color */
+  text-align: center;
+  /* Center text */
+  padding: 1rem;
+  /* Set padding */
+}
+
+.contact-container {
+  background: var(--background-color);
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 700px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  transition: 0.3s;
+  background-color: var(--background-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 4px 15px rgba(99, 87, 225, 0.3);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(45deg, #00FFFF, var(--primary-color));
+  color: var(--beadwork-white);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+.contact-details {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.social-media {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: var(--beadwork-white);
+  background-color: #120101;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+.social-icon:hover {
+  background-color: var(--accent-color);
+}
